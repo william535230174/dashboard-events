@@ -1,0 +1,100 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "name": "Abu Dhabi Workshop",
+            "date": "15-02-2025",
+            "participants": [
+                "Max Verstappen",
+                "Lewis Hamilton",
+                "Charles Leclerc",
+                "Lando Norris",
+                "Carlos Sainz",
+                "George Russell",
+                "Sergio Perez",
+                "Fernando Alonso",
+                "Oscar Piastri",
+                "Esteban Ocon",
+                "Pierre Gasly",
+                "Yuki Tsunoda",
+                "Daniel Ricciardo",
+                "Valtteri Bottas",
+                "Zhou Guanyu",
+                "Lance Stroll",
+                "Kevin Magnussen",
+                "Nico Hulkenberg",
+                "Alexander Albon",
+                "Logan Sargeant"
+            ]
+        },
+
+        {
+            "id": 2,
+            "name": "UCL Wordpress",
+            "date": "03-04-2025",
+            "participants": [
+                "Cristiano Ronaldo",
+                "Karim Benzema",
+                "Gareth Bale",
+                "Luka Modric",
+                "Toni Kroos",
+                "Angel Di Maria",
+                "Xabi Alonso",
+                "Marcelo Vieira",
+                "Sergio Ramos",
+                "Pepe",
+                "Raphael Varane",
+                "Iker Casillas",
+                "Isco",
+                "Dani Carvajal",
+                "Fabio Coentrao",
+                "Alvaro Morata",
+                "James Rodriguez",
+                "Keylor Navas"
+            ]
+        },
+
+        {
+            "id": 3,
+            "name": "AI Consulting",
+            "date": "29-07-2025",
+            "participants": [
+                "Joe Biden",
+                "Xi Jinping",
+                "Vladimir Putin",
+                "Narendra Modi",
+                "Emmanuel Macron",
+                "Rishi Sunak",
+                "Fumio Kishida",
+                "Justin Trudeau",
+                "Olaf Scholz",
+                "Benjamin Netanyahu",
+                "Kim Jong Un",
+                "Volodymyr Zelenskyy",
+                "Recep Tayyip Erdoğan",
+                "Mohammed bin Salman",
+                "Sheikh Mohammed bin Rashid Al Maktoum"
+            ]
+        },
+
+        {
+            "id": 4,
+            "name": "Global Startup Meetup",
+            "date": "10-09-2025",
+            "participants": [
+                "Elon Musk",
+                "Mark Zuckerberg",
+                "Sundar Pichai",
+                "Tim Cook",
+                "Satya Nadella",
+                "Jensen Huang",
+                "Jeff Bezos",
+                "Patrick Collison",
+                "Evan Spiegel",
+                "Reed Hastings",
+                "Daniel Ek",
+                "Susan Wojcicki"
+            ]
+        }
+    ]
+}
