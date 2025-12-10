@@ -20,6 +20,7 @@ export default function Dashboard() {
     const finishedEvents = events.filter(e => e.status === "finished").length;
     const onGoingEvents = events.filter(e => e.status === "on going").length;
     const scheduledEvents = events.filter(e => e.status === "scheduled").length;
+    const canceledEvents = events.filter(e => e.status === "canceled").length;
 
     const totalParticipants = events.reduce((acc, ev) => {
         return acc + (ev.participants?.length || 0);
@@ -51,6 +52,12 @@ export default function Dashboard() {
             color: "#dc2626"
         },
         {
+            label: "Canceled Events",
+            value: canceledEvents,
+            total: totalEvents || 1,
+            color: "#6b7280"
+        },
+        {
             label: "All Events",
             value: totalEvents,
             total: totalEvents || 1,
@@ -64,7 +71,7 @@ export default function Dashboard() {
                 Dashboard
             </h1>
 
-            <div className = "grid grid-cols-2 md:grid-cols-5 gap-6">
+            <div className = "grid grid-cols-2 md:grid-cols-6 gap-6">
                 {data.map((d, i) => (
                     <div
                         key = {d.label}
