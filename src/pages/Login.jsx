@@ -100,7 +100,7 @@ export default function Login ({onLogin}) {
                     whileHover = {{scale: 1.05}}
                     whileTap = {{scale: 0.95}}
                     onClick = {submit}
-                    className = "w-full bg-blue-600 text-white p-2 rounded"
+                    className = "w-full bg-blue-600 text-white p-2 rounded btn-gradient"
                 >
                     Confirm
                 </motion.button>

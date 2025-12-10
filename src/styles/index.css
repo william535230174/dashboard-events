@@ -6,6 +6,32 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.btn-gradient {
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #4338ca, #2563eb);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+}
+
+.btn-gradient:active {
+    transform: translateY(0px) scale(0.98);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.25);
+}
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }

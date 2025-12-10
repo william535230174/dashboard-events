@@ -247,7 +247,7 @@ export default function EventList () {
                     <motion.button 
                         whileHover = {{scale: 1.05}}
                         whileTap = {{scale: 0.95}}
-                        className = "bg-blue-600 text-white px-4 py-2 rounded"
+                        className = "bg-blue-600 text-white px-4 py-2 rounded btn-gradient"
                         onClick = {add}
                     >
                         + Add
