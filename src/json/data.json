@@ -4,6 +4,11 @@
             "id": 1,
             "name": "Abu Dhabi Workshop",
             "date": "2025-02-15",
+            "location": "",
+            "description": "",
+            "startTime": "",
+            "endTime": "",
+            "status": "scheduled",
             "participants": [
                 "Max Verstappen",
                 "Lewis Hamilton",
@@ -27,11 +32,15 @@
                 "Logan Sargeant"
             ]
         },
-
         {
             "id": 2,
             "name": "UCL Wordpress",
             "date": "2025-04-03",
+            "location": "",
+            "description": "",
+            "startTime": "",
+            "endTime": "",
+            "status": "scheduled",
             "participants": [
                 "Cristiano Ronaldo",
                 "Karim Benzema",
@@ -53,11 +62,15 @@
                 "Keylor Navas"
             ]
         },
-
         {
             "id": 3,
             "name": "AI Consulting",
             "date": "2025-07-29",
+            "location": "",
+            "description": "",
+            "startTime": "",
+            "endTime": "",
+            "status": "scheduled",
             "participants": [
                 "Joe Biden",
                 "Xi Jinping",
@@ -76,11 +89,15 @@
                 "Sheikh Mohammed bin Rashid Al Maktoum"
             ]
         },
-
         {
             "id": 4,
             "name": "Global Startup Meetup",
             "date": "2025-09-10",
+            "location": "",
+            "description": "",
+            "startTime": "",
+            "endTime": "",
+            "status": "scheduled",
             "participants": [
                 "Elon Musk",
                 "Mark Zuckerberg",
