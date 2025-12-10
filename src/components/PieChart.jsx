@@ -1,39 +1,31 @@
 import React, {useEffect, useState} from "react";
 import {motion} from "framer-motion";
 
-export default function PieChart ({percent, color}) {
+export default function PieChart({value, total, color}) { 
+    const percentage = total === 0 ? 0 : Math.round((value / total) * 100); 
+    const [progress, setProgress] = useState(0);
 
-    const [value, setValue] = useState(0);
+    useEffect(() => { 
+        const timer = setTimeout(() => setProgress(percentage), 150); 
+        return () => clearTimeout(timer); 
+    }, [percentage]);
 
-    useEffect(() => {
-        const timer = setTimeout(() => setValue(percent), 100);
-        return () => clearTimeout(timer);
-    }, [percent]);
-
-    return (
-        <motion.div
-            initial = {{opacity: 0, scale: 0.8}}
-            animate = {{opacity: 1, scale: 1}}
-            transition = {{duration: 0.4, ease: "easeOut"}}
-            className = "flex flex-col items-center"
-        >
+    return ( 
+        <div className = "relative flex items-center justify-center">
             <motion.div 
-                animate = {{
-                    background: `conic-gradient(${color} ${value}%, #ddd 0)`
-                }}
-                transition = {{duration: 1, ease: "easeOut"}}
-                className = "w-32 h-32 rounded-full"
-            >
-            </motion.div>
-
-            <motion.p
-                initial = {{opacity: 0, y: 10}}
-                animate = {{opacity: 1, y: 0}}
+                initial = {{opacity: 0, scale: 0.8}}
+                animate = {{opacity: 1, scale: 1}}
                 transition = {{duration: 0.4, ease: "easeOut"}}
-                className = "mt-2 font-semibold"
-            >
-                {value}%
-            </motion.p>
-        </motion.div>
+                className = "w-32 h-32 rounded-full"
+                style = {{
+                    background: `conic-gradient(${color} ${progress}%, #e5e7eb 0)`
+                }}
+            />
+
+            <div className = "absolute text-center">
+                <p className = "text-xl font-bold">{value}</p>
+                <p className = "text-sm text-gray-600">total</p>
+            </div>
+        </div>
     );
 }
