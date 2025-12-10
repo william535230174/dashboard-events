@@ -58,35 +58,34 @@ export default function EventTransaction () {
         setConfirmDelete (false);
         setDeleteId (null);
         setSelected (null);
-        showToast("Event deleted", "success");
+        showToast ("Event Deleted", "Success!");
     };
 
     return (
-        <div className="animate-fadeIn">
-            <h1 className="text-2xl font-bold mb-5 tracking-wide">
+        <div className = "animate-fadeIn">
+            <h1 className = "text-2xl font-bold mb-5 tracking-wide">
                 Event Transaction
             </h1>
 
-            <motion.div layout className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-5">
+            <motion.div layout className = "grid grid-cols-2 md:grid-cols-3 gap-3 mb-5">
                 <AnimatePresence>
-                    {events.map(ev => (
+                    {events.map (ev => (
                         <motion.button
-                            key={ev.id}
-                            layout
-                            initial={{opacity: 0, y: 10}}
-                            animate={{opacity: 1, y: 0}}
-                            exit={{opacity: 0}}
-                            transition={{duration: 0.25}}
-                            whileHover={{scale: 1.05}}
-                            whileTap={{scale: 0.97}}
-                            onClick={() => setSelected(ev)}
-                            className="p-3 bg-white shadow rounded text-left hover:bg-gray-100"
-                        >
-                            <p className="font-semibold">{ev.name}</p>
-                            <p className="text-sm text-gray-500">{ev.date}</p>
+                            key = {ev.id}
+                            layout initial = {{opacity: 0, y: 10}}
+                            animate = {{opacity: 1, y: 0}}
+                            exit = {{opacity: 0}}
+                            transition = {{duration: 0.25}}
+                            whileHover = {{scale: 1.05}}
+                            whileTap = {{scale: 0.97}}
+                            onClick = {() => setSelected(ev)}
+                            className = "p-3 bg-white shadow rounded text-left hover:bg-gray-100">
 
-                            <div className="mt-1">
-                                <span className={badge(ev.status)}>
+                            <p className = "font-semibold">{ev.name}</p>
+                            <p className = "text-sm text-gray-500">{ev.date}</p>
+
+                            <div className = "mt-1">
+                                <span className = {badge(ev.status)}>
                                     {ev.status}
                                 </span>
                             </div>
@@ -95,18 +94,20 @@ export default function EventTransaction () {
                 </AnimatePresence>
             </motion.div>
 
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode = "wait">
                 {selected && (
                     <motion.div
-                        key={selected.id}
-                        initial={{opacity: 0, y: 10}}
-                        animate={{opacity: 1, y: 0}}
-                        exit={{opacity: 0, y: -10}}
-                        transition={{duration: 0.3}}
-                        className="p-4 bg-white shadow rounded"
-                    >
+                        key = {selected.id}
+                        initial = {{opacity: 0, y: 10}}
+                        animate = {{opacity: 1, y: 0}}
+                        exit = {{opacity: 0, y: -10}}
+                        transition = {{duration: 0.3}}
+                        className = "p-4 bg-white shadow rounded">
+
                         <div className="flex justify-between items-center mb-3">
-                            <h2 className="text-xl font-bold">{selected.name}</h2>
+                            <h2 className="text-xl font-bold">
+                                {selected.name}
+                            </h2>
 
                             <div className="flex gap-3">
                                 <select
@@ -114,19 +115,32 @@ export default function EventTransaction () {
                                     value={selected.status}
                                     onChange={(e) => updateStatus(selected.id, e.target.value)}
                                 >
-                                    <option value="scheduled">Scheduled</option>
-                                    <option value="on going">On Going</option>
-                                    <option value="finished">Finished</option>
-                                    <option value="canceled">Canceled</option>
+                                    <option value="scheduled">
+                                        Scheduled
+                                    </option>
+
+                                    <option value="on going">
+                                        On Going
+                                    </option>
+
+                                    <option value="finished">
+                                        Finished
+                                    </option>
+
+                                    <option value="canceled">
+                                        Canceled
+                                    </option>
+
                                 </select>
 
                                 <motion.button
-                                    whileHover={{scale: 1.1}}
-                                    onClick={() => openDelete(selected.id)}
-                                    className="text-red-600 hover:text-red-800"
+                                    whileHover = {{scale: 1.1}}
+                                    onClick = {() => openDelete(selected.id)}
+                                    className = "text-red-600 hover:text-red-800"
                                 >
-                                    <Trash2 size={20} />
+                                    <Trash2 size = {20} />
                                 </motion.button>
+
                             </div>
                         </div>
 
@@ -134,8 +148,13 @@ export default function EventTransaction () {
                             <b>Date:</b> {selected.date}
                         </p> 
 
-                        <p className = "text-gray-700 mb-1"><b>Status:</b> {selected.status}</p>
-                        <p className = "text-gray-700 mb-3"><b>Participants:</b></p>
+                        <p className = "text-gray-700 mb-1">
+                            <b>Status:</b> {selected.status}
+                        </p>
+
+                        <p className = "text-gray-700 mb-3">
+                            <b>Participants:</b>
+                        </p>
 
                         {selected.participants?.length > 0 ? (
                             <motion.ul
@@ -149,13 +168,12 @@ export default function EventTransaction () {
                             >
                                 {selected.participants.map((p, i) => (
                                     <motion.li
-                                        key={i}
+                                        key = {i}
                                         variants={{
                                             hidden: {opacity: 0, x: -10},
                                             show: {opacity: 1, x: 0}
                                         }}
-                                        className="text-gray-800"
-                                    >
+                                        className="text-gray-800">
                                         {p}
                                     </motion.li>
                                 ))}
@@ -180,6 +198,7 @@ export default function EventTransaction () {
                         animate = {{scale: 1, opacity: 1}}
                         transition = {{duration: 0.25}}
                         className = "bg-white rounded-lg shadow-xl p-6 w-80 text-center">
+
                         <p className = "text-lg font-semibold mb-4">
                             Delete this event?
                         </p>
@@ -189,8 +208,7 @@ export default function EventTransaction () {
                                 whileHover = {{scale: 1.05}}
                                 whileTap = {{scale: 0.95}}
                                 className = "px-4 py-2 bg-gray-200 rounded"
-                                onClick = {() => setConfirmDelete(false)}
-                            >
+                                onClick = {() => setConfirmDelete(false)}>
                                 Cancel
                             </motion.button>
 
@@ -198,8 +216,7 @@ export default function EventTransaction () {
                                 whileHover = {{scale: 1.05}}
                                 whileTap = {{scale: 0.95}}
                                 className = "px-4 py-2 bg-red-600 text-white rounded"
-                                onClick = {del}
-                            >
+                                onClick = {del}>
                                 Delete
                             </motion.button>
                         </div>
@@ -216,8 +233,7 @@ export default function EventTransaction () {
                         toast.type === "success"
                         ? "fixed bottom-5 right-5 bg-green-600 text-white px-4 py-2 rounded shadow"
                         : "fixed bottom-5 right-5 bg-red-600 text-white px-4 py-2 rounded shadow"
-                    }
-                >
+                    }>
                     {toast.msg}
                 </motion.div>
             )}
