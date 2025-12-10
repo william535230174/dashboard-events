@@ -7,10 +7,36 @@ export default function Login ({onLogin}) {
     const [error, setError] = useState("");
 
     const submit = () => {
+        if (!user && !pass) {
+            setError("Username dan Password is Empty!");
+            return;
+        }
+
+        if (!user) {
+            setError("Username is Empty!");
+            return;
+        }
+
+        if (!pass) {
+            setError("Password is Empty!");
+            return;
+        }
+
         if (user !== "admin" && pass !== "admin") {
             setError("Username dan Password Incorrect!");
             return;
         }
+
+        if (user !== "admin") {
+            setError("Username Incorrect!");
+            return;
+        }
+
+        if (pass !== "admin") {
+            setError("Password Incorrect!");
+            return;
+        }
+
 
         if (user !== "admin") {
             setError("Username Incorrect!");

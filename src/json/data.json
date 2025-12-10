@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Abu Dhabi Workshop",
-            "date": "15-02-2025",
+            "date": "2025-02-15",
             "participants": [
                 "Max Verstappen",
                 "Lewis Hamilton",
@@ -31,7 +31,7 @@
         {
             "id": 2,
             "name": "UCL Wordpress",
-            "date": "03-04-2025",
+            "date": "2025-04-03",
             "participants": [
                 "Cristiano Ronaldo",
                 "Karim Benzema",
@@ -57,7 +57,7 @@
         {
             "id": 3,
             "name": "AI Consulting",
-            "date": "29-07-2025",
+            "date": "2025-07-29",
             "participants": [
                 "Joe Biden",
                 "Xi Jinping",
@@ -80,7 +80,7 @@
         {
             "id": 4,
             "name": "Global Startup Meetup",
-            "date": "10-09-2025",
+            "date": "2025-09-10",
             "participants": [
                 "Elon Musk",
                 "Mark Zuckerberg",
