@@ -71,7 +71,13 @@ export default function Dashboard() {
                 Dashboard
             </h1>
 
-            <div className = "grid grid-cols-2 md:grid-cols-6 gap-6">
+            <div className ="
+                grid
+                grid-cols-1
+                sm:grid-cols-2
+                lg:grid-cols-3
+                gap-10
+            ">
                 {data.map((d, i) => (
                     <div
                         key = {d.label}
@@ -80,14 +86,18 @@ export default function Dashboard() {
                             transform transition duration-300
                             hover:scale-105 hover:shadow-xl
                             opacity-0 animate-card
+                            flex flex-col items-center
+                            min-w-[200px]
                         "
                         style = {{animationDelay: `${i * 0.15}s`}}
                     >
-                        <PieChart
-                            value = {d.value}
-                            total = {d.total}
-                            color = {d.color}
-                        />
+                        <div className="flex items-center justify-center w-full">
+                            <PieChart 
+                                value = {d.value}
+                                total = {d.total}
+                                color = {d.color}
+                            />
+                        </div>
 
                         <p className = "text-center mt-4 font-semibold tracking-wide">
                             {d.label}

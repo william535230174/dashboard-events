@@ -214,7 +214,7 @@ export default function EventList () {
                     onChange = {(e) => setForm ({...form, status: e.target.value})}
                 >
                     <option value = "">
-                        Pilih Status
+                        Select Status
                     </option>
 
                     <option value = "scheduled">
@@ -261,7 +261,7 @@ export default function EventList () {
                         <th className = "p-2">
                             Event
                         </th>
-                        
+
                         <th className = "p-2">
                             Date
                         </th>
